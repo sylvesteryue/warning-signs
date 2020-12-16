@@ -1,9 +1,11 @@
 import React from 'react';
 
+import classes from './Card.module.css';
+
 const card = (props) => {
     
     return(
-        <div>
+        <div className={classes.WarningCard} key={props.key}>
             <div>
                 <span>
                     {props.card_text}
