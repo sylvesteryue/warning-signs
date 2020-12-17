@@ -8,7 +8,8 @@ class Game extends Component {
     render() {
         return(
             <div>
-                <Card key="test" card_text="testing"/>
+                <Card key="test1" card_text="testing"/>
+                <Card key="test2" card_text="testing again"/>
             </div>
         );
     }
