@@ -1,0 +1,24 @@
+/* .container {
+    bottom: 0;
+    position: "fixed";
+}
+
+.bubbleContainer {
+    width: "100%";
+    display: "flex";
+}
+
+.chatBubble {
+    border-radius: '10px';
+    margin: '5px';
+    padding: '10px';
+    display: 'inline-block';
+    background-color: royalblue;
+} */
+
+.right {
+    justify-content: flex-end !important;
+}
+.left {
+    justify-content: flex-start !important;
+}

@@ -8,7 +8,6 @@ import {
 import logo from './logo.svg';
 import './App.css';
 
-import Game from './containers/Game';
 import Home from './containers/Home';
 import Room from './containers/Room';
 
@@ -19,7 +18,6 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/room" component={Room}/>
-        <Route path="/game" component={Game}/>
       </Switch>
     </BrowserRouter>
   );
