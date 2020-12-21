@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../Card/Card';
 
-const hand = (props) => {
+const Hand = (props) => {
 
     return(
         <div style={{height: '25%', position: "bottom"}}>
@@ -18,4 +18,4 @@ const hand = (props) => {
 
 };
 
-export default hand;
+export default Hand;

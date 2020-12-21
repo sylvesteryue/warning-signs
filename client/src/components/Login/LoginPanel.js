@@ -1,44 +1,34 @@
-import {React, Component} from 'react';
+import React, {useState} from 'react';
+import {TextField, Button} from '@material-ui/core';
+
+import classes from './LoginPanel.module.css';
 
 
-class LoginPanel extends Component {
+const LoginPanel = (props) => {
+
+    const [playerName, setPlayerName] = useState("");
+    const [roomCode, setRoomCode] = useState("");
     
-    constructor(props) {
-        super(props);
-
-        this.state = {playerName: '', roomCode: ''};
-
-        this.handlePlayerNameChange = this.handlePlayerNameChange.bind(this);
-        this.handleRoomCodeChange = this.handleRoomCodeChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    
-    handleSubmit(event) {
-        alert('Player name: ' + this.state.playerName + '   Room Code: ' + this.state.roomCode);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert('Player name: ' + playerName + '   Room Code: ' + roomCode);
     }
 
-    handlePlayerNameChange(event) {
-        this.setState({playerName: event.target.value})
-    }
-
-    handleRoomCodeChange(event) {
-        this.setState({roomCode: event.target.value})
-    }
 
     //change layout of form later
-    render() {
-        return (
+    return(
+        <form onSubmit={handleSubmit}>
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Player Name</label>
-                    <input type="text" value={this.state.playerName} onChange={this.handlePlayerNameChange}></input>
-                    <label>Room Code</label>
-                    <input type="text" value={this.state.roomCode} onChange={this.handleRoomCodeChange}></input>
-                    <input type="submit" value="Submit"/>
-                </form>
+                <TextField id="standard-basic" label="Player Name" value={playerName} inputProps={{min: 0, style: { textAlign: 'center' }}} onChange={event => setPlayerName(event.target.value)}/>
             </div>
-        );
-    }
+            <div>   
+                <TextField id="standard-basic" label="Room Code" type="text" value={roomCode} inputProps={{min: 0, style: { textAlign: 'center' }}} onChange={event => setRoomCode(event.target.value)}/> 
+            </div>
+            <div style={{textAlign: "center"}}>
+                <Button variant="contained" color="primary" type="submit">Enter</Button>
+            </div>
+        </form>
+    );
 }
 
 export default LoginPanel;

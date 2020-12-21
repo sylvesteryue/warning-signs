@@ -8,7 +8,7 @@ function createData(name, points, isSingle) {
     return {id, name, points, isSingle};
 }
 
-const scoreboard = (props) => {
+const Scoreboard = (props) => {
 
     const dummyData = [
         createData('Player 1', 5, false),
@@ -52,4 +52,4 @@ const scoreboard = (props) => {
 };
 
 
-export default scoreboard;
+export default Scoreboard;
