@@ -1,7 +1,5 @@
 import React from 'react';
 
-import chatForm from '../ChatForm';
-
 //import classes from './Chat.module.css';
 
 

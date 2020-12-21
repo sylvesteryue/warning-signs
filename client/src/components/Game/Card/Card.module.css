@@ -2,10 +2,11 @@
     background: red;
     display: inline-block;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 13%;
+    height: 100%;
     display: inline-block;
     margin: 0.4em 0.2em;
+    color: white
     /* padding: 0.8em 0.6em;
     margin: 0.4em 0.2em;
     height: 20em;
@@ -16,5 +17,16 @@
 
 .PerkCard {
     background: #FFFFFF;
-    
+    display: inline-block;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    width: 14%;
+    height: 100%;
+    display: inline-block;
+    margin: 0.4em 0.2em;
 }
+
+.Highlighted {
+    box-shadow: rgb(204, 204, 136) 0px 0px 10px 10px;
+}
+

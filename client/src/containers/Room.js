@@ -1,8 +1,7 @@
 import {React, Component} from 'react';
 
 import Game from '../components/Game/Game';
-import ChatForm from '../components/Chat/ChatForm';
-import ChatContainer from '../components/Chat/ChatContainer/ChatContainer';
+import Chat from '../components/Chat/Chat';
 import Scoreboard from '../components/Scoreboard/Scoreboard';
 
 class Room extends Component {
@@ -16,8 +15,7 @@ class Room extends Component {
 
                 <div style={{width: '25%'}}>
                     <Scoreboard />
-                    <ChatContainer/>
-                    <ChatForm/>
+                    <Chat/>
                 </div>
             </div>
         );

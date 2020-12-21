@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {List, ListItem, ListItemText} from '@material-ui/core';
-
 import {Table, TableBody, TableRow, TableCell, Chip} from '@material-ui/core';
 
 let id = 0;

@@ -6,7 +6,7 @@ import Table from './Table/Table';
 const Game = (props) => {
 
     return(
-        <div>
+        <div style={{height: '100%'}}>
             <Table/>
             <Hand/>
         </div>

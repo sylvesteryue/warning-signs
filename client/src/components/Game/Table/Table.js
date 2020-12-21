@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Card from '../Card/Card';
+import Date from '../Date/Date';
 
 const Table = (props) => {
     return(
-        <div>
-            <Card key="test1" card_text="testing"/>
-            <Card key="test2" card_text="testing again"/>
+        <div style={{height: '75%'}}>
+            <Date/>
         </div>
     );
 };
