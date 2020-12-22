@@ -19,7 +19,7 @@ class Home extends Component {
                     <LoginPanel />
                 </Grid>   
 
-                </Grid> 
+            </Grid> 
         );
     }
 }

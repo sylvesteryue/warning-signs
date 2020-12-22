@@ -1,9 +1,10 @@
 import React from 'react';
-
+import {FixedSizeList} from 'react-window';
 //import classes from './Chat.module.css';
 
 
 import makeStyles from "@material-ui/core/styles/makeStyles";
+
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -70,22 +71,26 @@ const ChatContainer = (props) => {
         }
       ];
       
+
+      const chatBubble = ({index, style}) => {
+        const chatData = dummyData[index];
+
+        return(
+          <div className={`${classes.bubbleContainer} ${chatData.sender === "user" ? classes.user : classes.other}`} key={index} style={style}>
+            <div key={index} className={classes.bubble} style={{backgroundColor: "#2196f3"}}>
+                <div className={classes.button}>{chatData.message}</div>
+            </div>
+          </div>
+        );
+        
+      }
       //need to virtualize scroll it
       const chatBubbles = dummyData.map((obj, i = 0) => {
-          if(obj.sender === "user")
-          {
-            return <div className={`${classes.bubbleContainer} ${classes.user}`} key={i}>
-                <div key={i++} className={classes.bubble} style={{backgroundColor: "#2196f3"}}>
+            return <div className={`${classes.bubbleContainer} ${obj.sender === "user" ? classes.user : classes.other}`} key={i}>
+                <div key={i++} className={classes.bubble} style={obj.sender === "user" ? {backgroundColor: "#2196f3"} : {backgroundColor: "#C0C0C0"}}>
                 <div className={classes.button}>{obj.message}</div>
                 </div>
             </div>
-          } else {
-            return <div className={`${classes.bubbleContainer} ${classes.other}`} key={i}>
-                <div key={i++} className={classes.bubble} style={{backgroundColor: "#C0C0C0"}}>
-                    <div className={classes.button}>{obj.message}</div>
-                </div>
-            </div>
-          }
         // <div className={`${classes.bubbleContainer} ${classes.user}`} key={i}>
         //   <div key={i++} className={classes.bubble}>
         //     <div className={classes.button}>{obj.message}</div>

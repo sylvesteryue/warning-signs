@@ -10,7 +10,7 @@ const ChatForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert('Message: ' + this.state.chatMsg);
+        alert('Message: ' + chatMsg);
     }
  
     //change visual later

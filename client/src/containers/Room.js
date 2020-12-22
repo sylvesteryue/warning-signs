@@ -1,5 +1,7 @@
 import {React, Component} from 'react';
 
+import {Grid} from '@material-ui/core';
+
 import Game from '../components/Game/Game';
 import Chat from '../components/Chat/Chat';
 import Scoreboard from '../components/Scoreboard/Scoreboard';
@@ -8,16 +10,15 @@ class Room extends Component {
 
     render() {
         return(
-            <div style={{display: 'flex', flexDirection: 'row'}}>
-                <div style={{width: '75%'}}>
+            <Grid container spacing={3} style={{ minHeight: '100vh' }}>
+                <Grid item xs={9}>
                     <Game/>
-                </div>
-
-                <div style={{width: '25%'}}>
+                </Grid>
+                <Grid item xs={3}>
                     <Scoreboard />
                     <Chat/>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         );
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import  {FixedSizedList} from 'react-window';
 import {Table, TableBody, TableRow, TableCell, Chip} from '@material-ui/core';
 
 let id = 0;
