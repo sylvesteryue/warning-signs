@@ -1,11 +1,16 @@
-import React from 'react';
+import {React, useState} from 'react';
+import {Button} from '@material-ui/core';
 
 import Card from '../Card/Card';
 
 const Hand = (props) => {
 
+    //const [selectedCards, setSelectedCards] = useState([]);
+
+    
+
     return(
-        <div style={{height: '25%', position: "bottom", display: "flex"}}>
+        <div style={{display: "flex"}}>
             <Card key="test1" card_text="testing" type="warning"/>
             <Card key="test2" card_text="testing again" type="warning"/>
             <Card key="test3" card_text="warning again" type="warning"/>
@@ -13,6 +18,8 @@ const Hand = (props) => {
             <Card key="test5" card_text="perk" type="perk"/>
             <Card key="test6" card_text="bruh" type="perk"/>
             <Card key="test7" card_text="ok" type="perk"/>
+
+            <Button variant="contained" color="primary">Choose</Button>
         </div>
     );
 

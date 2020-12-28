@@ -97,7 +97,7 @@ const ChatContainer = (props) => {
         //   </div>
         // </div>
         });
-      return <div className={classes.container}>{chatBubbles}</div>;
+      return <div style={{height: "75vh"}}>{chatBubbles}</div>;
 };
 
 

@@ -15,7 +15,7 @@ const ChatForm = (props) => {
  
     //change visual later
     return (
-        <div style={{position: "fixed", bottom: "0"}}>
+        <div>
             <form onSubmit={handleSubmit}>
                 <TextField id="standard-basic" placeholder="Enter message..." value={chatMsg} onChange={event => setChatMsg(event.target.value)}/>
                 <IconButton type="submit" aria-label="send message" variant="contained" color="primary">

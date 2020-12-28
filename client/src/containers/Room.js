@@ -10,7 +10,7 @@ class Room extends Component {
 
     render() {
         return(
-            <Grid container spacing={3} style={{ minHeight: '100vh' }}>
+            <Grid container style={{ minHeight: '100vh' }}>
                 <Grid item xs={9}>
                     <Game/>
                 </Grid>
